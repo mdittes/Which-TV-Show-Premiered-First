@@ -1,0 +1,21 @@
+.card {
+    text-align: center;
+    border: black solid 1px;
+    padding: 1rem;
+    width: 10rem;
+    height: 15rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #cfe04b
+  }
+
+header {
+    text-align: center;
+    font-family: "Jazz LET", fantasy;
+}
+
+button {
+    position: absolute;
+    bottom: 75px;
+    right: 100px;
+  }
