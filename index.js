@@ -44,6 +44,7 @@ function renderOne(data) {
     card1.addEventListener('click', (e) => {
         title.innerText = data.name
         form[0].value = title
+        date1 = data.premiered
     })
 
     date1 = data.premiered
@@ -68,6 +69,7 @@ function renderTwo(data) {
     card2.addEventListener('click', (e) => {
         title.innerText = data.name
         form[0].value = title
+        date2 = data.premiered
     })
 
     date2 = data.premiered
@@ -82,5 +84,6 @@ document.addEventListener('keydown', (e) => {
             alert('Wrong!')
         }
         form.reset()
+        window.location.reload()
     }
 })
