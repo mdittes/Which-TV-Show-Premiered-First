@@ -4,6 +4,10 @@ const cardName1 = document.querySelector('#card-title1')
 const cardName2 = document.querySelector('#card-title2')
 const cardImage1 = document.querySelector('#card-image1')
 const cardImage2 = document.querySelector('#card-image2')
+const card1 = document.querySelector('#card1')
+const card2 = document.querySelector('#card2')
+const summary1 = document.querySelector('#summary1')
+const summary2 = document.querySelector('#summary2')
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(0);
@@ -26,6 +30,10 @@ function renderOne(data) {
     cardName1.append(title)
 
     cardImage1.src = data.image.medium
+
+    cardImage1.addEventListener('mouseover', (e) => {
+        summary1.textContent = data.summary
+    })
     console.log(data)
 }
 
@@ -34,4 +42,8 @@ function renderTwo(data) {
     cardName2.append(title)
 
     cardImage2.src = data.image.medium
+
+    cardImage2.addEventListener('mouseover', (e) => {
+        summary2.textContent = data.summary
+    })
 }
