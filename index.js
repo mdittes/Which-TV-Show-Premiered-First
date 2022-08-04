@@ -8,6 +8,7 @@ const card1 = document.querySelector('#card1')
 const card2 = document.querySelector('#card2')
 const summary1 = document.querySelector('#summary1')
 const summary2 = document.querySelector('#summary2')
+const submitBtn = document.querySelector('#submit-answer')
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(0);
@@ -32,9 +33,9 @@ function renderOne(data) {
     cardImage1.src = data.image.medium
 
     cardImage1.addEventListener('mouseover', (e) => {
-        summary1.textContent = data.summary
+        summary1.innerText = data.summary
     })
-    console.log(data)
+    return data.premiered
 }
 
 function renderTwo(data) {
@@ -44,6 +45,12 @@ function renderTwo(data) {
     cardImage2.src = data.image.medium
 
     cardImage2.addEventListener('mouseover', (e) => {
-        summary2.textContent = data.summary
+        summary2.innerText = data.summary
     })
+    return data.premiered
 }
+
+submitBtn.addEventListener('click', (e) => {
+    console.log('hey you')
+})
+
