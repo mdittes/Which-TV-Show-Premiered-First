@@ -25,12 +25,13 @@ function renderOne(data) {
     const title = data.name 
     cardName1.append(title)
 
-    image.src = data.image.medium
-    cardImage1.append(image.src)
+    cardImage1.src = data.image.medium
     console.log(data)
 }
 
 function renderTwo(data) {
     const title = data.name
     cardName2.append(title)
+
+    cardImage2.src = data.image.medium
 }
