@@ -68,7 +68,7 @@ card2.addEventListener('click', (e) => {
 })
 
 submitBtn.addEventListener('click', (e) => {
-    if(renderOne() < renderTwo()) {
+    if(renderOne < renderTwo) {
         alert('Correct!')
     } else {
         alert('Wrong!')

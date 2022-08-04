@@ -31,11 +31,17 @@ header {
     font-family: "Jazz LET", fantasy;
 }
 
-button {
+/* button {
     position: absolute;
     bottom: 75px;
     right: 100px;
-  }
+  } */
+
+ /* form {
+    position: absolute;
+    bottom: 90px;
+    right: 100px;
+ }  */
   
   .tooltip:hover + .hide {
     display: block;
