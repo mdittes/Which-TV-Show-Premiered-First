@@ -9,6 +9,7 @@ const card2 = document.querySelector('#card2')
 const summary1 = document.querySelector('#summary1')
 const summary2 = document.querySelector('#summary2')
 const submitBtn = document.querySelector('#submit-answer')
+const form = document.querySelector('#selected-answer')
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(0);
@@ -39,6 +40,11 @@ function renderOne(data) {
     cardImage1.addEventListener('mouseout', (e) => {
         summary1.style = 'display: none'
     })
+    card1.addEventListener('click', (e) => {
+        title.innerText = data.name
+        form[0].value = title
+    })
+
     console.log(data)
     return data.premiered
 }
@@ -56,22 +62,26 @@ function renderTwo(data) {
     cardImage2.addEventListener('mouseout', (e) => {
         summary2.style = 'display: none'
     })
+    card2.addEventListener('click', (e) => {
+        title.innerText = data.name
+        form[0].value = title
+    })
     return data.premiered
 }
-
-card1.addEventListener('click', (e) => {
-    console.log('sup')
-})
 
 card2.addEventListener('click', (e) => {
     console.log('oh hey')
 })
 
 submitBtn.addEventListener('click', (e) => {
-    if(renderOne < renderTwo) {
-        alert('Correct!')
-    } else {
-        alert('Wrong!')
+    //if(e.key === "Enter") {
+        //e.preventDefault()
+        if(renderOne < renderTwo) {
+            alert('Correct!')
+        } else {
+            alert('Wrong!')
+        }
     }
-})
+    
+)
 
