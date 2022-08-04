@@ -51,6 +51,10 @@ function renderTwo(data) {
 }
 
 submitBtn.addEventListener('click', (e) => {
-    console.log('hey you')
+    if(renderOne < renderTwo) {
+        alert('Correct!')
+    } else if(renderOne > renderTwo) {
+        alert('Wrong!')
+    }
 })
 
