@@ -18,3 +18,5 @@ fetch(`${url}${id1}`)
 fetch(`${url}${id2}`)
 .then(res => res.json())
 .then(data => console.log(data))
+
+
