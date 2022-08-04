@@ -10,6 +10,7 @@ const summary1 = document.querySelector('#summary1')
 const summary2 = document.querySelector('#summary2')
 const submitBtn = document.querySelector('#submit-answer')
 const form = document.querySelector('#selected-answer')
+const input = document.querySelector('#answer-text')
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(0);
@@ -45,9 +46,11 @@ function renderOne(data) {
         form[0].value = title
     })
 
-    console.log(data)
-    return data.premiered
+    date1 = data.premiered
 }
+
+let date1;
+let date2;
 
 function renderTwo(data) {
     const title = data.name
@@ -66,22 +69,18 @@ function renderTwo(data) {
         title.innerText = data.name
         form[0].value = title
     })
-    return data.premiered
+
+    date2 = data.premiered
 }
 
-card2.addEventListener('click', (e) => {
-    console.log('oh hey')
-})
-
-submitBtn.addEventListener('click', (e) => {
-    //if(e.key === "Enter") {
-        //e.preventDefault()
-        if(renderOne < renderTwo) {
+document.addEventListener('keydown', (e) => {
+    if(e.key === "Enter") {
+        e.preventDefault()
+        if(date1 < date2) {
             alert('Correct!')
         } else {
             alert('Wrong!')
         }
+        form.reset()
     }
-    
-)
-
+})
