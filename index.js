@@ -44,7 +44,7 @@ function renderOne(data) {
     card1.addEventListener('click', (e) => {
         title.innerText = data.name
         form[0].value = title
-        date1 = data.premiered
+        activeDate = date1
     })
 
     date1 = data.premiered
@@ -52,6 +52,9 @@ function renderOne(data) {
 
 let date1;
 let date2;
+
+let title1;
+let title2;
 
 function renderTwo(data) {
     const title = data.name
@@ -69,16 +72,29 @@ function renderTwo(data) {
     card2.addEventListener('click', (e) => {
         title.innerText = data.name
         form[0].value = title
-        date2 = data.premiered
+        activeDate = date2
     })
 
     date2 = data.premiered
 }
 
+let correctAnswer;
+
+function compareDates() {
+    if(date1 < date2) {
+        correctAnswer = date1
+    } else {
+        correctAnswer = date2
+    }
+}
+
+let activeDate;
+
 document.addEventListener('keydown', (e) => {
     if(e.key === "Enter") {
         e.preventDefault()
-        if(date1 < date2) {
+        compareDates()
+        if(activeDate === correctAnswer) {
             alert('Correct!')
         } else {
             alert('Wrong!')
