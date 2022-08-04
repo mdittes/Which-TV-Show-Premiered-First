@@ -34,7 +34,12 @@ function renderOne(data) {
 
     cardImage1.addEventListener('mouseover', (e) => {
         summary1.innerText = data.summary
+        summary1.style = 'display: block'
     })
+    cardImage1.addEventListener('mouseout', (e) => {
+        summary1.style = 'display: none'
+    })
+    console.log(data)
     return data.premiered
 }
 
@@ -46,14 +51,26 @@ function renderTwo(data) {
 
     cardImage2.addEventListener('mouseover', (e) => {
         summary2.innerText = data.summary
+        summary2.style = 'display: block'
+    })
+    cardImage2.addEventListener('mouseout', (e) => {
+        summary2.style = 'display: none'
     })
     return data.premiered
 }
 
+card1.addEventListener('click', (e) => {
+    console.log('sup')
+})
+
+card2.addEventListener('click', (e) => {
+    console.log('oh hey')
+})
+
 submitBtn.addEventListener('click', (e) => {
-    if(renderOne < renderTwo) {
+    if(renderOne() < renderTwo()) {
         alert('Correct!')
-    } else if(renderOne > renderTwo) {
+    } else {
         alert('Wrong!')
     }
 })
