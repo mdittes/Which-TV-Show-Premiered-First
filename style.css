@@ -46,6 +46,7 @@ header {
   .tooltip:hover + .hide {
     display: block;
     color: red;
+    background-color: whitesmoke;
   }
 
   .hide {

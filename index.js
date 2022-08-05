@@ -8,17 +8,16 @@ const card1 = document.querySelector('#card1')
 const card2 = document.querySelector('#card2')
 const summary1 = document.querySelector('#summary1')
 const summary2 = document.querySelector('#summary2')
-const submitBtn = document.querySelector('#submit-answer')
 const form = document.querySelector('#selected-answer')
-const input = document.querySelector('#answer-text')
 
 function getRandomInt(min, max) {
     min = Math.ceil(0);
     max = Math.floor(5000);
     return Math.floor(Math.random() * (max - min + 1) + min);
-}
-let id1 = getRandomInt()
-let id2 = getRandomInt()
+};
+
+let id1 = getRandomInt();
+let id2 = getRandomInt();
 
 fetch(`${url}${id1}`)
 .then(res => res.json())
@@ -48,7 +47,7 @@ function renderOne(data) {
     })
 
     date1 = data.premiered
-}
+};
 
 let date1;
 let date2;
@@ -76,7 +75,7 @@ function renderTwo(data) {
     })
 
     date2 = data.premiered
-}
+};
 
 let correctAnswer;
 
@@ -86,7 +85,7 @@ function compareDates() {
     } else {
         correctAnswer = date2
     }
-}
+};
 
 let activeDate;
 
@@ -102,4 +101,4 @@ document.addEventListener('keydown', (e) => {
         form.reset()
         window.location.reload()
     }
-})
+});
