@@ -34,7 +34,7 @@ function renderOne(data) {
     cardImage1.src = data.image.medium
 
     cardImage1.addEventListener('mouseover', (e) => {
-        summary1.innerText = data.summary
+        summary1.innerHTML = data.summary
         summary1.style = 'display: block'
     })
     cardImage1.addEventListener('mouseout', (e) => {
@@ -62,7 +62,7 @@ function renderTwo(data) {
     cardImage2.src = data.image.medium
 
     cardImage2.addEventListener('mouseover', (e) => {
-        summary2.innerText = data.summary
+        summary2.innerHTML = data.summary
         summary2.style = 'display: block'
     })
     cardImage2.addEventListener('mouseout', (e) => {

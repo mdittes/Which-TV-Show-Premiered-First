@@ -1,7 +1,7 @@
 body {
     padding: 20px;
     text-align: center;
-    background-color: #5e8f8f;
+    background-color: #5e6e8f;
   }
 
 
@@ -10,10 +10,11 @@ body {
     border: black solid 1px;
     padding: 1rem;
     width: 15rem;
-    height: 20rem;
+    height: 22rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #cfe04b
+    box-shadow: 3px 4px #cfe04b;
+    /* align-items: center; */
 }
 
 .image {
@@ -21,21 +22,18 @@ body {
     height: 245px;
     border: 1px solid #00000020;
     border-radius: 2px;
-    text-align: center;
+    /* text-align: center; */
     background-color: white;
+    display: flex;
+    /* justify-content: center;  */
+    /* position: sticky; */
 }
-
 
 header {
     text-align: center;
     font-family: "Jazz LET", fantasy;
 }
 
-/* button {
-    position: absolute;
-    bottom: 75px;
-    right: 100px;
-  } */
 
  /* form {
     position: absolute;
@@ -43,7 +41,7 @@ header {
     right: 100px;
  }  */
   
-  .tooltip:hover + .hide {
+  .tooltip:hover {
     display: block;
     color: red;
     background-color: whitesmoke;
