@@ -1,7 +1,7 @@
 body {
     padding: 20px;
     text-align: center;
-    background-color: #5e6e8f;
+    background-color: #dbd68a;
   }
 
 
@@ -41,12 +41,12 @@ header {
     right: 100px;
  }  */
   
-  .tooltip:hover {
+  .tooltip {
     display: block;
-    color: red;
-    background-color: whitesmoke;
+    background: whitesmoke;
   }
 
   .hide {
     display: none;
+    background: #5e6e8f;
   }
