@@ -2,8 +2,7 @@ body {
     padding: 20px;
     text-align: center;
     background-color: #b1f0f0;
-  }
-
+}
 
 .card {
     text-align: center;
@@ -15,7 +14,6 @@ body {
     margin: 1rem 2rem;
     box-shadow: 3px 4px #cfe04b;
     background-color: #ffd768eb;
-    /* align-items: center; */
 }
 
 .image {
@@ -23,11 +21,8 @@ body {
     height: 245px;
     border: 1px solid #00000020;
     border-radius: 2px;
-    /* text-align: center; */
     background-color: white;
     display: flex;
-    /* justify-content: center;  */
-    /* position: sticky; */
 }
 
 header {
@@ -35,19 +30,12 @@ header {
     font-family: "Jazz LET", fantasy;
 }
 
-
- /* form {
-    position: absolute;
-    bottom: 90px;
-    right: 100px;
- }  */
-  
-  .tooltip {
+.tooltip {
     display: block;
     background: #ffd768eb;
-  }
+}
 
-  .hide {
+.hide {
     display: none;
     background: #ffd768eb;
-  }
+}

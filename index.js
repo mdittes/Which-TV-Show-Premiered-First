@@ -52,9 +52,6 @@ function renderOne(data) {
 let date1;
 let date2;
 
-let title1;
-let title2;
-
 function renderTwo(data) {
     const title = data.name
     cardName2.append(title)
@@ -77,6 +74,8 @@ function renderTwo(data) {
     date2 = data.premiered
 };
 
+let activeDate;
+
 let correctAnswer;
 
 function compareDates() {
@@ -86,8 +85,6 @@ function compareDates() {
         correctAnswer = date2
     }
 };
-
-let activeDate;
 
 document.addEventListener('keydown', (e) => {
     if(e.key === "Enter") {
