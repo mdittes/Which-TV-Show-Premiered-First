@@ -14,7 +14,7 @@ body {
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #cfe04b;
-    background-color: whitesmoke;
+    background-color: #ffd768eb;
     /* align-items: center; */
 }
 
@@ -44,10 +44,10 @@ header {
   
   .tooltip {
     display: block;
-    background: whitesmoke;
+    background: #ffd768eb;
   }
 
   .hide {
     display: none;
-    background: #5e6e8f;
+    background: #ffd768eb;
   }
