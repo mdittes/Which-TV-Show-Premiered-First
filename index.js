@@ -12,13 +12,13 @@ const submitBtn = document.querySelector('#submit-answer')
 const form = document.querySelector('#selected-answer')
 const input = document.querySelector('#answer-text')
 
-function getRandomIntInclusive(min, max) {
+function getRandomInt(min, max) {
     min = Math.ceil(0);
     max = Math.floor(5000);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-let id1 = getRandomIntInclusive()
-let id2 = getRandomIntInclusive()
+let id1 = getRandomInt()
+let id2 = getRandomInt()
 
 fetch(`${url}${id1}`)
 .then(res => res.json())
